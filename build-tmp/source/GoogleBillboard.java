@@ -19,10 +19,11 @@ public final static String e = "2.7182818284590452353602874713526624977572470936
 public void setup() {            
   noLoop();
   // substring up to index 11 because decimal
+  // substring up to index 10 removed decimal 
 }
 
 public void draw() {   
-  for (int i = 0; i < e.length(); i++) {
+  for (int i = 0; i < e.length() - 10; i++) {
   	String digits = removeCharAt(e, 1).substring(i, i+10);
   	// System.out.println(digits + " " + digits.length());
     double dDigits = Double.parseDouble(digits);
